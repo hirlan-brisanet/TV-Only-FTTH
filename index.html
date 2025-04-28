@@ -20,5 +20,14 @@
 </head>
 <body>
   <video src="video_marketing_700mb.mp4" controls autoplay loop></video>
+
+  <script>
+    const video = document.querySelector('video');
+    setInterval(() => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    }, 5000); // a cada 5 segundos, verifica se o vídeo ainda está tocando
+  </script>
 </body>
 </html>
